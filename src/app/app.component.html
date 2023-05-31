@@ -1,0 +1,27 @@
+<div class="header">
+  <div class="shop">
+    Online Shopping
+  </div>
+
+  <div class="cart-wrapper">
+    <!-- <div class="cart-icon"> -->
+      <i class="material-icons icon">shopping_cart</i>
+    <!-- </div> -->
+    <div class="cart-info">
+      <h3>Cart</h3>
+    </div>
+      <span class="cart-count">{{calcTotal()}}</span>
+  </div>
+  
+</div>
+<div class="body">
+  <div class="product">
+    <product-list (productAdded)="addProductToCart($event)" [products]="productList"></product-list>
+  </div>
+  <div class="cart">
+    <shopping-cart [products]="cartProductList" (productRemoved)="removeProduct($event)"></shopping-cart>
+  </div>
+  
+</div>
+
+

@@ -1,0 +1,12 @@
+<div class="product"  *ngIf="product">
+    <div class="two">
+        <div class="name">{{product.name}}</div>
+        <div class="price">&#8377; {{product.price}}</div>
+    </div>
+    <div class="close" (click)="remove($event)">
+        <mat-icon>close</mat-icon>
+    </div>
+  </div>
+  <div class="hr">
+
+  </div>
